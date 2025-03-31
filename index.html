@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+   
+    <div class="music-container">
+        <div class="music-info">
+            <h2 id="title">Song Name</h2>
+            <p id="artist">Artist</p>
+        </div>
+
+        <!-- Album Art -->
+        <div class="album-cover">
+            <img id="cover" src="https://upload.wikimedia.org/wikipedia/en/3/3c/Can%27t_Help_Falling_in_Love_by_Elvis_Presley_US_picture_sleeve.png" alt="Album Cover">
+        </div>
+
+        <!-- Audio Player -->
+        <audio id="audio" src="C:\Users\DELL\Downloads\nova\Songs\Elvis Presley - Can't Help Falling In Love (Official Audio).mp3"></audio>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prev"><img src="https://cdn-icons-png.flaticon.com/512/151/151846.png"></button>
+            <button id="play"><img src="https://icons.veryicon.com/png/o/internet--web/web-video-clip/play-332.png"></button>
+            <button id="next"><img src="https://cdn-icons-png.flaticon.com/512/130/130884.png"></button>
+        </div>
+
+        <!-- Progress Bar -->
+        <input type="range" id="progress" value="0">
+
+        <!-- Volume Control -->
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    </div>
+
+    <script src="script.js"></script> <!-- Linking JS -->
+</body>
+</html>
