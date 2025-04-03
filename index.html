@@ -21,7 +21,6 @@
           height: 40px; 
         }
 
-
         .overlay {
             position: absolute;
             top: 0;
@@ -54,6 +53,20 @@
         .music-info h2, .music-info p {
             color: white;
         }
+
+        .playlist {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .playlist button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -73,13 +86,15 @@
             </div>
 
             <!-- Audio Player -->
-            <audio id="audio" src"https://github.com/NOVABROWN/Music-Player1/blob/main/Songs/Elvis%20Presley%20-%20Can't%20Help%20Falling%20In%20Love%20(Official%20Audio).mp3"></audio>
+            <audio id="audio"></audio>
 
             <!-- Controls -->
             <div class="controls">
                 <button id="prev"><img src="https://cdn-icons-png.flaticon.com/512/151/151846.png"></button>
                 <button id="play"><img src="https://icons.veryicon.com/png/o/internet--web/web-video-clip/play-332.png"></button>
                 <button id="next"><img src="https://cdn-icons-png.flaticon.com/512/130/130884.png"></button>
+                <button id="shuffle">🔀</button>
+                <button id="lyrics">📜</button>
             </div>
 
             <!-- Progress Bar -->
@@ -87,6 +102,13 @@
 
             <!-- Volume Control -->
             <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+
+            <!-- Playlist Selection -->
+            <div class="playlist">
+                <button onclick="loadPlaylist('love')">Love Songs</button>
+                <button onclick="loadPlaylist('pop')">Pop Hits</button>
+                <button onclick="loadPlaylist('chill')">Chill Vibes</button>
+            </div>
         </div>
     </div>
 

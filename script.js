@@ -30,6 +30,10 @@ function loadSong(song) {
     artist.innerText = song.artist;
     audio.src = song.src;
     cover.src = song.cover;
+
+// Highlight active song
+document.querySelectorAll(".song-item").forEach(item => item.classList.remove("highlight"));
+document.getElementById(song.title).classList.add("highlight");
 }
 
 // Play & Pause
@@ -77,3 +81,4 @@ prevBtn.addEventListener("click", prevSong);
 
 // Load First Song
 loadSong(songs[songIndex]);
+audio.addEventListener("ended", nextSong);
